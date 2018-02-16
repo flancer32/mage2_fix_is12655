@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\Api\DataObjectHelper">
+        <plugin name="fl32_fix_is12655_plugin"
+                type="Flancer32\FixIs12655\Plugin\Framework\Api\DataObjectHelper"
+                sortOrder="100"
+                disabled="false"/>
+    </type>
+
+</config>
