@@ -11,13 +11,15 @@ $ cd ${DIR_MAGE_ROOT}
 $ composer require flancer32/mage2_fix_is12655
 $ bin/magento module:enable Flancer32_FixIs12655
 $ bin/magento setup:upgrade
+$ bin/magento setup:di:compile
 $ bin/magento setup:static-content:deploy
 $ bin/magento cache:clean
+$ <set filesystem permissions to your files>
 ```
 
 ## Uninstall
 
-You need an authentication keys for `https://repo.magento.com/` to uninstall any Magento 2 module. Go to your [Magento Connect](https://www.magentocommerce.com/magento-connect/customer/account/) account, section (My Account / Connect / Developer / Secure Keys) and generate pair of keys to connect to Magento 2 repository. Then place composer authentication file `auth.json` besides your `composer.json` as described [here](https://getcomposer.org/doc/articles/http-basic-authentication.md) and put your authentication keys for `https://repo.magento.com/` into the authentication file:
+You need an authentication keys for `https://repo.magento.com/` to uninstall any Magento 2 module. Go to your [Magento](https://marketplace.magento.com/customer/accessKeys/) account, section (My Profile / Marketplace / Access Keys) and generate pair of keys to connect to Magento 2 repository. Then place composer authentication file `auth.json` besides your `composer.json` as described [here](https://getcomposer.org/doc/articles/http-basic-authentication.md) and put your authentication keys for `https://repo.magento.com/` into the authentication file:
 ```json
 {
   "http-basic": {
